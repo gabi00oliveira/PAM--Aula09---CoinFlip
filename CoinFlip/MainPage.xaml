@@ -9,21 +9,23 @@
             Spacing="25">
             
             <Image
-                x:Name="coroa"
+                x:Name="MoedaImgcoroa"
                 Source="coroa.png"
                 HeightRequest="250"
                 Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a race car number eight" />
+                SemanticProperties.Description= "Moeda para simbolizar o cara ou coroa" />
 
             <Image
             x:Name="cara"
-            Source="cara.webp"
+            Source="cara.png"
             HeightRequest="250"
             Aspect="AspectFit"
             SemanticProperties.Description="dot net bot in a race car number eight" />
 
-            <Picker x:Name="Selecao"
-        Title="Escolha um lado:">
+            <!--Picker é uma lista que da varias opçoes para selecionar-->
+            <Picker 
+                x:Name="SelecaoPicker"
+                Title="Selecione cara ou coroa:">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>Cara</x:String>
@@ -36,7 +38,7 @@
             <Button
                 x:Name="FlipButton"
                 Text="Girar a moeda" 
-                SemanticProperties.Hint="cara ou coroa"
+                SemanticProperties.Hint="Botão que vai gerar aleatoriamente se e cara ou coroa"
                 Clicked="Girar_Clicked"
                 HorizontalOptions="Fill" />
         </VerticalStackLayout>
